@@ -1,0 +1,56 @@
+<!--pages/bindDevice/bindDevice.wxml-->
+<!-- <form bindsubmit="sub">
+<view class='inputView'>
+<input class='input' name="sn" placeholder='产品序列号'/>
+
+</view>
+<button formType="submit" style='margin-left: 15rpx; margin-right: 15rpx; margin-top: 50rpx; border-radius: 40rpx' type="primary">提交</button>
+</form> -->
+<view class='bg-c'>
+  <view class='conTop'>
+    <image class='camera' src='../../img/scan.png' mode='widthFix' bindtap='scCode'></image>
+  </view>
+  <form bindsubmit='sub'>
+    <view class='deviceItems'>
+      <text class='color bindDe'>绑定设备</text>
+      <view class='fonzCol itemRight'>
+        <text wx:if="{{bindDevice}}">已绑定</text>
+        <text wx:if="{{!bindDevice}}">未绑定</text>
+        <view class='complete' wx:if="{{bindDevice}}">
+          <text class='complete-icon'></text>
+        </view>
+        <text class='jt'></text>
+      </view>
+    </view>
+    <view class='deviceItems'>
+      <view>
+        <view class='color bindDe'>序列号</view>
+        <text class='fonzCol showTxt'>用于显示设备的序列号</text>
+      </view>
+      <view>
+        <input placeholder='序列号' name="sn" placeholder-class='placeColor' class='showTxt serialNumber' value="{{show}}"></input>
+      </view>
+    </view>
+    <!-- <view class='deviceItems'>
+      <view>
+        <view class='color bindDe'>名称</view>
+        <text class='fonzCol showTxt'>用于显示设备的名称</text>
+      </view>
+      <view>
+        <input placeholder='设备名称' name="deviceName" placeholder-class='placeColor' class='showTxt serialNumber'></input>
+      </view>
+    </view>
+    <view class='deviceItems'>
+      <view>
+        <view class='color bindDe'>出厂日期</view>
+        <text class='fonzCol showTxt'>显示设备出厂日期</text>
+      </view>
+      <view>
+        <input placeholder='出厂日期' placeholder-class='placeColor' class='showTxt serialNumber'></input>
+      </view>
+    </view> -->
+    <view class='bind'>
+      <button class='bindBtn' form-type='submit'>绑定设备</button>
+    </view>
+  </form>
+</view>

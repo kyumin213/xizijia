@@ -1,0 +1,53 @@
+/* pages/77_index/index.wxss */
+.index-top{
+  width: 100%;
+  text-align: center;
+  margin-top: 200rpx;
+}
+.index-top .homeImg{
+  width: 138rpx;
+  height: 162rpx;
+  margin: 20rpx auto;
+}
+.index-top .homeImg .homeIcon{
+  width: 100%;
+  background-size: cover;
+}
+.index-top .deviceText{
+  font-size: 36rpx;
+  color: rgb(178,178,178);
+  margin-top: 60rpx;
+}
+.index-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 602rpx;
+  width: 100%;
+  border-radius: 300rpx 300rpx 0 0;
+  background: linear-gradient(222deg,rgb(1,171,128) 0%,rgb(32,218,171) 100%);
+}
+.index-bottom .openBtn{
+  width: 276rpx;
+  height: 276rpx;
+  margin: 102rpx auto 0 auto;
+}
+.index-bottom .openBtn .openLock{
+  width: 100%;
+  background-size: cover;
+  margin: 0 auto;
+}
+.index-bottom .bomText{
+  width: 100%;
+  text-align: center;
+  margin:80rpx auto 86rpx auto;
+  color: #fff;
+  font-size: 36rpx;
+}
+.index-bottom .bomText .textLeft{
+  margin-right: 30rpx;
+}
+.index-bottom .bomText .textRight{
+  margin-left: 30rpx;
+}

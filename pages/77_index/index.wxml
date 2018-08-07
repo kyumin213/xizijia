@@ -1,0 +1,25 @@
+<!--pages/77_index/index.wxml-->
+<!-- <button bindtap='bindDevice'>绑定设备</button>
+<button bindtap='deviceList'>设备列表</button>
+<button bindtap='open'>立即开门</button>
+<button bindtap='logs'>开门记录</button> -->
+<view class='bg-c'>
+  <view class='index-top'>
+    <view class='homeImg'>
+      <image src='../../img/home-icon.png' class='homeIcon' mode='widthFix'></image>
+    </view>
+    <view class='hidden deviceText'>当前开锁设备名称智能1号</view>
+    <view class='deviceText'>赶紧去添加一个设备吧~</view>
+  </view>
+  <view class='index-bottom'>
+    <view class='openBtn'>
+      <image src='../../img/openDefault.png' class="{{lockBtn?'show':'hidden'}} openLock" mode='widthFix'  bindtap='open'></image>
+      <image src='../../img/bindLock.png' class='openLock' wx:if="{{!lockBtn}}" mode='widthFix' bindtap='bindDevice'></image>
+    </view>
+    <view class='bomText'>
+      <text class='textLeft' bindtap='logs'>开门记录</text>
+      <text>|</text>
+      <text class='textRight' bindtap='deviceList'>设备列表</text>
+    </view>
+  </view>
+</view>

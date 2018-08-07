@@ -1,0 +1,71 @@
+/* pages/bindDevice/bindDevice.wxss */
+
+.input {
+  padding-left: 10px;
+  height: 44px;
+}
+
+.inputView {
+  border: 2px solid #4b0e0e;
+  border-radius: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.conTop {
+  width: 304rpx;
+  height: 304rpx;
+  margin: 70rpx auto;
+}
+
+.camera {
+  width: 100%;
+}
+
+.deviceItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 34rpx;
+  height: 132rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.deviceItems .itemRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 26rpx;
+}
+.deviceItems .placeColor{
+  color: rgb(179,179,179);
+}
+.deviceItems .bindDe {
+  font-size: 32rpx;
+}
+
+.serialNumber {
+  text-align: right;
+}
+
+.showTxt {
+  font-size: 26rpx;
+}
+.bind {
+  position: fixed;
+  bottom: 200rpx;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bind .bindBtn {
+  width: 596rpx;
+  height: 90rpx;
+  background: rgb(1, 171, 128);
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 36rpx;
+}

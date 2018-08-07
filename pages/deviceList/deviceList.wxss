@@ -1,0 +1,297 @@
+/* pages/deviceList/deviceList.wxss */
+
+/* .head{
+  height: 30%;
+  width: 100%;
+  background-color: red;
+} */
+
+.bg-c {
+  background: rgb(243, 243, 243);
+}
+
+.head .content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 74rpx 0 134rpx 66rpx;
+  width: 100%;
+  background: rgb(1, 171, 128);
+  box-sizing: border-box;
+}
+
+.deviceIcon {
+  width: 192rpx;
+  height: 192rpx;
+}
+
+.content .lockIcon {
+  width: 100%;
+}
+
+.content .deviceDeta {
+  color: #fff;
+  font-size: 36rpx;
+  margin-left: 62rpx;
+}
+.content .bindTxt{
+  font-size: 36rpx;
+}
+.content .bindNum {
+  font-size: 28rpx;
+  margin-top: 22rpx;
+}
+
+.titleText {
+  font-size: 32rpx;
+  background: rgb(243, 243, 243);
+  padding: 42rpx 0 42rpx 36rpx;
+}
+
+.deviceList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 170rpx;
+  padding: 0 46rpx 0 66rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.deviceList .checkIcon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.deviceList .checkIcon .check {
+  width: 100%;
+}
+
+.deviceList .xhIcon {
+  width: 42rpx;
+  height: 36rpx;
+}
+
+.deviceList .xhIcon .xh {
+  width: 100%;
+}
+
+.deviceList .listRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 170rpx;
+  width: 70rpx;
+  /* margin-left: 200rpx; */
+}
+
+.deviceList .deviceName {
+  font-size: 32rpx;
+}
+
+.deviceList .showText {
+  font-size: 28rpx;
+}
+
+.deviceShow {
+  background: #fff;
+}
+
+.deviceItem {
+  margin-bottom: 20rpx;
+}
+
+.namesList {
+  margin: 0 30rpx;
+  border-top: 2rpx solid rgb(243, 243, 243);
+  padding: 60rpx 0 60rpx 168rpx;
+}
+
+.namesList .names {
+  margin-bottom: 48rpx;
+  font-size: 28rpx;
+}
+
+.namesList .names:last-child {
+  margin-bottom: 0;
+}
+
+.jtBom {
+  transform: rotate(135deg);
+  transition: ease-in-out 0.5s;
+}
+
+.conLeft {
+  position: relative;
+}
+
+.conLeft .quantity {
+  display: inline-block;
+  width: 192rpx;
+  height: 192rpx;
+  /* border-radius: 50%; */
+  border: 4rpx solid #fff;
+}
+
+.dlCon {
+  display: inline-block;
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+  width: 166rpx;
+  height: 166rpx;
+  background: #fff;
+  /* border-radius: 50%; */
+  color: rgb(1, 171, 128);
+  text-align: center;
+  line-height: 166rpx;
+  border-radius: 50%;
+}
+
+.itemNum {
+  font-size: 52rpx;
+  color: rgb(51, 51, 51);
+}
+
+.binds {
+  margin-right: 26rpx;
+}
+
+.peoNum {
+  margin-left: 26rpx;
+  margin-right: 20rpx;
+}
+
+.nodevice {
+  padding-left: 36rpx;
+  font-size: 32rpx;
+  color: rgb(170, 170, 170);
+}
+
+.unbind {
+  width: 100%;
+  margin: 60rpx auto 34rpx auto;
+}
+
+.unbind .unbindBtn, .sendBtn {
+  width: 596rpx;
+  height: 90rpx;
+  background: rgb(170, 170, 170);
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 36rpx;
+}
+
+.unbind .active, .sendBtn {
+  background: rgb(1, 171, 128);
+}
+
+/*发送密码弹窗  */
+
+/*弹出框  */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.modal .showModal {
+  position: absolute;
+  left: 7%;
+  width: 86%;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 20% auto;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.modal .showModal .modalTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130rpx;
+  border-bottom: 2rpx solid #ccc;
+  font-size: 32rpx;
+  color: rgb(102, 102, 102);
+}
+
+.modal .showModal .closeModal {
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+}
+
+.modal .showModal .modalTitle .close {
+  display: inline-block;
+  width: 40rpx;
+  height: 4rpx;
+  background: rgb(201, 201, 201);
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+.modal .showModal .modalTitle .close::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40rpx;
+  height: 4rpx;
+  background: rgb(201, 201, 201);
+  transform: rotate(90deg);
+}
+
+.showModal .subPwd {
+  border-top: 2rpx solid rgb(170, 170, 170);
+  /* margin: 60rpx auto; */
+}
+
+.subPwd .subBtn {
+  height: 120rpx;
+  line-height: 120rpx;
+  background: #fff;
+  font-size: 32rpx;
+  color: rgb(51, 51, 51);
+}
+.pwds{
+  height: 150rpx;
+}
+
+.colors{
+  font-size: 32rpx;
+}
+
+.sendPwd{
+  margin-bottom: 34rpx;
+}
+.setTime{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.setTime .times{
+  height: 120rpx;
+  width: 250rpx;
+}
+ .devicePwd{
+  width: 200rpx;
+  font-size: 32rpx;
+} 
+.pwdColor{
+  color: red;
+}
+.pwdGree{
+  color: green;
+}
+.openBtn{
+  margin-bottom: 60rpx;
+}

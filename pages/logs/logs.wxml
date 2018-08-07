@@ -1,0 +1,24 @@
+<!--logs.wxml-->
+<!-- <view wx:if="{{showView}}">暂未有任何记录</view>
+<view class="section">
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item" wx:for="{{logs}}" wx:for-index="i" wx:for-item="e">
+      产品序列号:{{e.devicePlatformSn}}--{{e.deviceBehaviorCtime}}
+    </view>
+  </view>
+</view> -->
+<view>
+  <view class='times'>
+    2018年6月
+  </view>
+  <view class='logsList' wx:for="{{logs}}" wx:key="{{index}}">
+    <view>
+      <view class='logName'>{{item.devicePlatformSn}}</view>
+      <view class='logTime'>
+        <text class='openDay'>{{item.deviceBehaviorCtime}}</text>
+        <!-- <text>22:00</text> -->
+      </view>
+    </view>
+    <text class='success'>开门成功</text>
+  </view>
+</view>

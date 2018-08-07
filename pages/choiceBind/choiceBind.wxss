@@ -1,0 +1,39 @@
+/* pages/choiceBind/choiceBind.wxss */
+
+.bg-c {
+  background: rgb(243, 243, 243);
+}
+
+.titleTxt {
+  margin-left: 60rpx;
+  font-size: 30rpx;
+  padding: 36rpx 0;
+  color: rgb(98, 98, 98);
+}
+
+.item1 {
+  width: 690rpx;
+  height: 306rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 0 auto 58rpx auto;
+}
+
+.item1 .itemImg {
+  width: 108rpx;
+  height: 108rpx;
+  margin: auto;
+}
+
+.item1 .itemTxt {
+  font-size: 30rpx;
+  color: rgb(98, 98, 98);
+  margin-top: 30rpx;
+}
+
+.bindIcon {
+  width: 100%;
+}

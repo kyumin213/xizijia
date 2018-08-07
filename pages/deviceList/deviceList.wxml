@@ -1,0 +1,111 @@
+<!--pages/deviceList/deviceList.wxml-->
+<view class='bg-c'>
+  <view class='head'>
+    <view class='content'>
+      <view class='deviceIcon'>
+        <image src='../../img/deviceList-lock.png' mode='widthFix' class='lockIcon' bindtap='bindDevice'></image>
+        <!-- <view class='conLeft'>
+          <text class='dlCon'>65%</text>
+        </view> -->
+      </view>
+      <view class='deviceDeta'>
+        <view>
+          <text class="bindTxt">点击左侧图标绑定设备</text>
+          <!-- <text class="{{deviceShow?'show':'hidden'}}">当前设备电量</text> -->
+        </view>
+        <view class='bindNum'>
+          <text class='binds'>绑定设备</text>
+          <text>{{deviceNum}}</text>
+          <text class='peoNum'>绑定人数</text>
+          <text>{{userNum}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='color titleText'>
+      选择当前开锁设备
+    </view>
+    <view class="{{showView?'show':'hidden'}} nodevice">暂未绑定任何设备</view>
+    <view class='deviceItem' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='deviceList' data-index="{{index}}">
+        <view class='checkIcon' bindtap='checkStatus' data-index="{{index}}">
+          <view class="{{item.shows?'hidden':'show'}}" data-id='{{item.id}}'>
+            <image src='../../img/uncheck.png' mode='widthFix' wx:if="{{item.check == false}}" class="check"></image>
+            <image src='../../img/check.png' mode='widthFix' wx:if="{{item.check == true}}" class="check"></image>
+          </view>
+
+          <text class="{{item.shows?'show':'hidden'}} itemNum">{{index+1}}</text>
+        </view>
+        <view>
+          <view class='color deviceName'>{{item.devicePlatformPkcode}}</view>
+          <text class='fonzCol showText'>位置:未知</text>
+        </view>
+        <view class="devicePwd" data-index="{{index}}">
+          <view wx:if="{{item.deviceBindPwd}}">密码</view>
+          <text class='pwdColor' wx:if="{{item.devicePwd==false}}">{{item.deviceBindPwd}}</text>
+          <text class='pwdGree' wx:if="{{item.devicePwd==true}}">{{item.deviceBindPwd}}</text>
+        </view>
+        <view class='listRight' bindtap='deviceShow' data-index="{{index}}">
+          <view class='xhIcon'>
+            <image src='../../img/xh.png' mode='widthFix' class='xh'></image>
+          </view>
+          <text class="jt {{item.shows?'jtBom':''}}"></text>
+        </view>
+      </view>
+      <view class="{{item.shows?'show':'hidden'}} deviceShow">
+        <view class='namesList' wx:if="{{item.clist != null}}">
+          <view wx:for="{{item.clist}}" class='names'>
+            <view class='fonzCol'>{{item.userAccountPhone}}</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class='unbind'>
+      <button class="unbindBtn {{checkStatus?'hidden':'show'}}" wx:if="{{!showView}}">申请解绑</button>
+      <button class="unbindBtn active {{checkStatus?'show':'hidden'}}" wx:if="{{!showView}}" bindtap='unbindDevice'>申请解绑</button>
+    </view>
+    <view class='sendPwd'>
+      <button class='sendBtn sendBtn' bindtap='sendPwd' data-statu="open" wx:if="{{checkStatus}}">发送密码</button>
+    </view>
+    <view class='sendPwd'>
+      <button class=' sendBtn openBtn' wx:if="{{checkStatus}}" bindtap='openLock'>申请开锁</button>
+    </view>
+  </view>
+  <view animation="{{animationData}}" class="modal" wx:if="{{sendShow}}">
+    <form bindsubmit='devicePwd'>
+      <view class='showModal'>
+        <view class='modalTitle'>
+          <text>密码</text>
+          <view class='closeModal' bindtap='closeModal' data-statu="close">
+            <text class="close"></text>
+          </view>
+        </view>
+        <view class='items'>
+          <view class='inpPwd'>
+            <input class='hidden pwds' type='number' disabled='true' placeholder='请输入密码编号' value='{{pwdCode}}' name="pwdId" placeholder-class='colors'></input>
+            <view class='setTime'>
+              <label>密码：</label>
+              <input class='pwds' disabled='true' placeholder-class='colors' value='{{pwds}}' name='pwd' placeholder='请输入密码'></input>
+            </view>
+            <view class='setTime'>
+              <input type='number' placeholder='请设置有效时间' name="times" class='times' placeholder-class='colors' value='{{times}}'></input>
+              <text>秒</text>
+            </view>
+          </view>
+        </view>
+        <view class='subPwd'>
+          <button class='subBtn' form-type='submit' data-statu='close'>确定</button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+<view wx:if="{{showView}}">暂未绑定任何设备</view>
+<!-- <view class="section">
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item" wx:for="{{list}}" wx:for-index="i" wx:for-item="e">
+      产品序列号:{{e.devicePlatformSn}}
+      <button>立即开门</button>
+    </view>
+  </view>
+</view>  -->

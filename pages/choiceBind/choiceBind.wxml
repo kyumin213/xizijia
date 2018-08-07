@@ -1,0 +1,20 @@
+<!--pages/choiceBind/choiceBind.wxml-->
+<view class='bg-c'>
+  <view class='titleTxt'>请选择绑定设备方式</view>
+  <view class='item1'>
+    <view>
+      <view class='itemImg'>
+        <image src='../../img/deviceNum.png' mode='widthFix' class='bindIcon'></image>
+      </view>
+      <view class='itemTxt'>输入设备序列号</view>
+    </view>
+  </view>
+    <view class='item1'>
+    <view>
+      <view class='itemImg'>
+        <image src='../../img/code.png' mode='widthFix' class='bindIcon'></image>
+      </view>
+      <view class='itemTxt'>扫码绑定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+button::after{
+  border: none;
+}
+.bg-c{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgb(238, 238, 238);
+  overflow-y: auto;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+.color{
+  color: rgb(51,51,51);
+}
+.fonzCol{
+  color: rgb(102,102,102);
+}
+.jt {
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+  transform: rotate(45deg);
+  transition: ease-in-out 0.4s;
+}
+/*完成图标  */
+.complete {
+  /* display: inline-block; */
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 100%;
+  background: linear-gradient(120deg,rgb(1,171,128) 0%,rgb(57,188,218) 100%, rgb(48,57,88));
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  position: relative;
+}
+
+.complete .complete-icon {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18rpx;
+  height: 10rpx;
+  border-left: 2rpx solid #fff;
+  border-bottom: 2rpx solid #fff;
+  transform: rotate(-45deg);
+  margin-left: -9rpx;
+  margin-top: -9rpx;
+}
